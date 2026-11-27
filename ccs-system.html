@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#126344"><title>De La Salle John Bosco College | CCS Information System</title>
+  <link rel="stylesheet" href="ccs-system.css">
+</head>
+<body>
+  <div id="appView" class="app">
+    <aside class="sidebar" id="sidebar"><div class="brand"><img src="images/logo.jpg" alt="CCS"><div><b>CCS</b><small>Information System</small></div><button class="close-menu" id="closeMenu" aria-label="Close menu">×</button></div><div class="nav-label">MAIN MENU</div><nav id="navigation"></nav><div class="side-bottom"><div class="signed-user"><span class="avatar">CC</span><span><b id="userLabel">Visitor</b><small id="roleLabel">Read-only access</small></span></div><button id="logoutButton" class="logout hidden">↪ <span>Log out admin</span></button></div></aside>
+    <main class="main"><header class="topbar"><button id="menuButton" class="menu-button" aria-label="Open menu">☰</button><div class="crumb"><span>CCS</span><b>/</b><strong id="crumbTitle">Dashboard</strong></div><div class="creator-credit"><span>Created by</span><b>Delfino · Vasquez · Masayon · Baclaan · Asotigue</b></div><div class="top-actions"><span class="local-pill"><i></i> Local preview</span><button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span id="themeIcon" aria-hidden="true">☾</span></button><span id="topAvatar" class="top-avatar">CC</span></div></header><div class="page-wrap"><div class="system-search-wrap"><label for="systemSearch">Search CCS records</label><div class="system-search"><span aria-hidden="true">⌕</span><input id="systemSearch" type="search" autocomplete="off" placeholder="Type a name, course, event, or announcement..." aria-controls="systemSuggestions" aria-expanded="false"><div id="systemSuggestions" class="system-suggestions" role="listbox"></div></div></div><div class="page-heading"><div><span class="eyebrow" id="pageEyebrow">DE LA SALLE JOHN BOSCO COLLEGE</span><h1 id="pageTitle">Dashboard</h1><p id="pageDescription">A clear view of your college at a glance.</p></div><div id="headingActions"></div></div><div id="content"></div><footer>De La Salle John Bosco College • College of Computer Studies • Technology for People. Innovation for a Better Society.</footer></div></main><div id="scrim" class="scrim"></div>
+  </div>
+  <section id="chatbotPanel" class="chatbot-panel" role="dialog" aria-labelledby="chatbotTitle" aria-describedby="chatbotIntro" aria-hidden="true">
+    <header class="chatbot-header">
+      <div><span>CCS Help</span><strong id="chatbotTitle">CCS Assistant</strong></div>
+      <button id="chatbotClose" class="chatbot-close" type="button" aria-label="Close chat">×</button>
+    </header>
+    <div id="chatbotMessages" class="chatbot-messages" aria-live="polite" aria-relevant="additions">
+      <p id="chatbotIntro" class="chat-message assistant">Hello! Ask me about CCS programs, student registration, faculty, events, or contact information.</p>
+      <div class="chatbot-prompts" aria-label="Suggested questions">
+        <button type="button" data-chat-prompt="What programs does CCS offer?">Programs</button>
+        <button type="button" data-chat-prompt="How do I register as a student?">Student registration</button>
+        <button type="button" data-chat-prompt="How can I contact CCS?">Contact CCS</button>
+      </div>
+    </div>
+    <form id="chatbotForm" class="chatbot-form">
+      <label class="sr-only" for="chatbotInput">Ask the CCS Assistant</label>
+      <input id="chatbotInput" type="text" maxlength="300" autocomplete="off" placeholder="Type your question...">
+      <button class="primary" type="submit">Send</button>
+    </form>
+  </section>
+  <button id="chatbotToggle" class="chatbot-toggle" type="button" aria-controls="chatbotPanel" aria-expanded="false" aria-label="Open CCS Assistant">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5h-6l-4.5 4v-4h-.5A2.5 2.5 0 0 1 4 13.5z"/></svg>
+    <span>Chat</span>
+  </button>
+  <div id="modalRoot"></div><div id="toast" role="status" class="toast"></div>
+  <script src="ccs-system.js"></script>
+</body></html>
